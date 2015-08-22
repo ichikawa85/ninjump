@@ -28,7 +28,7 @@ public class Enemy : MonoBehaviour {
 		}
 	}
 
-	void OnTriggerEnter2D (Collider2D col){
+	protected void OnTriggerEnter2D (Collider2D col){
 		string layerName = LayerMask.LayerToName (col.gameObject.layer);
 		if(layerName == "Bullet"){
 			// PlayerBulletのTransformを取得

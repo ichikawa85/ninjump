@@ -49,6 +49,11 @@ public class Score : MonoBehaviour {
 	{
 		score = score + point;
 	}
+
+	public int GetPoint()
+	{
+		return score;
+	}
 	
 	// ハイスコアの保存
 	public void Save ()

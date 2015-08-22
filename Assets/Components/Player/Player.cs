@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class Player : MonoBehaviour {
@@ -18,9 +18,14 @@ public class Player : MonoBehaviour {
 	private GameObject trriger;
 
 	Vector2 hitPoint1, hitPoint2;
+	Vector2 min;
+	Vector2 max;
 
 	void Start (){
 		rb = GetComponent<Rigidbody2D>();
+
+		min = Camera.main.ViewportToWorldPoint(new Vector2(0, 0));
+		max = Camera.main.ViewportToWorldPoint(new Vector2(1, 1));
 	}
 	
 	void Update ()
