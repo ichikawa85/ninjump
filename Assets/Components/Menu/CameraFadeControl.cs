@@ -16,8 +16,7 @@ public class CameraFadeControl : MonoBehaviour
 
     void Awake()
     {
-        GameObject ui = GameObject.Instantiate(fadeOutUI);
-        blackImg = ui.transform.FindChild("FadeOut").GetComponent<Image>();
+        blackImg = fadeOutUI.transform.FindChild("FadeOut").GetComponent<Image>();
     }
     
     void Start ()
