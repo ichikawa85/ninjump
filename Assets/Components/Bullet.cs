@@ -5,6 +5,7 @@ public class Bullet : MonoBehaviour {
 	Rigidbody2D rb;
 	public int speed = 10;
 	public int power = 5;
+	public int lifeTime = 2;
 
 	// Use this for initialization
 	void Awake(){
@@ -14,6 +15,8 @@ public class Bullet : MonoBehaviour {
 	void Start () {
 		//rb = GetComponent<Rigidbody2D>();
 		rb.velocity = transform.right.normalized * speed;
+
+		Destroy (gameObject, lifeTime);
 	}
 
 	void OnTriggerEnter2D (Collider2D col){

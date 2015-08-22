@@ -15,6 +15,7 @@ public class Player : MonoBehaviour {
 
 	[SerializeField]
 	private GameObject bullet;
+	private GameObject trriger;
 
 	Vector2 hitPoint1, hitPoint2;
 
@@ -24,6 +25,11 @@ public class Player : MonoBehaviour {
 	
 	void Update ()
 	{
+		if(hp <= 0 )
+		{
+			Debug.Log("GAME OVER");
+		}
+
 		if (Input.GetMouseButtonDown(0)) {
 			HitFirst();
 		}
@@ -77,5 +83,9 @@ public class Player : MonoBehaviour {
 		Debug.Log("Jump");
 		rb.AddForce (Vector2.up * jumpForce);
 		isGrounded = false;
+	}
+
+	public void Damage(int dmg){
+		hp = hp - dmg;
 	}
 }
