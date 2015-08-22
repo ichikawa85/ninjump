@@ -60,15 +60,16 @@ public class Player : MonoBehaviour {
 		hitPoint2= worldPoint;
 	}
 
-void OnCollisionEnter2D (Collision2D col){
+	void OnCollisionEnter2D (Collision2D col){
+	//void OnTriggerEnter2D (Collider2D col){
 		string layerName = LayerMask.LayerToName (col.gameObject.layer);
-
-	if (layerName == "Ground") {
+		Debug.Log (layerName);
+		if (layerName == "Ground") {
 			isGrounded = true;
 			Vector2 temp = gameObject.transform.localScale;
 			temp.x *= -1;
 			gameObject.transform.localScale = temp;
-		}
+			}
 	}
 
 	void Jump (){
