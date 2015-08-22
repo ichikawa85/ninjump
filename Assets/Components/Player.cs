@@ -2,6 +2,8 @@
 using System.Collections;
 
 public class Player : MonoBehaviour {
+	public int hp = 3;
+
 	Rigidbody2D rb;
 	public int moveSpeed = 2;
 	public LayerMask groundLayer; //地面のレイヤー
@@ -10,6 +12,9 @@ public class Player : MonoBehaviour {
 
 	public float distance;
 	public Vector2 UnitVector;
+
+	[SerializeField]
+	private GameObject bullet;
 
 	Vector2 hitPoint1, hitPoint2;
 
@@ -36,6 +41,7 @@ public class Player : MonoBehaviour {
 			// 大きさが1以上で、ベクトルがy軸に対して30度未満のものをフリック入力として受け取る。
 			if(distance > 1f){
 				Debug.Log("Flick");
+				Instantiate (bullet, transform.position, transform.rotation);
 			}else if(isGrounded && distance <= 1f){
 				// Empty
 				Jump ();
@@ -55,7 +61,9 @@ public class Player : MonoBehaviour {
 	}
 
 void OnCollisionEnter2D (Collision2D col){
-	if (col.gameObject.tag == "Wall") {
+		string layerName = LayerMask.LayerToName (col.gameObject.layer);
+
+	if (layerName == "Ground") {
 			isGrounded = true;
 			Vector2 temp = gameObject.transform.localScale;
 			temp.x *= -1;
