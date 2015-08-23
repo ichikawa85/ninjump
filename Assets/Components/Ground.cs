@@ -9,7 +9,7 @@ public class Ground : MonoBehaviour {
 	
 	// Use this for initialization
 	void Start (){
-		director = new Vector2 (-30f, -5.4f);
+		director = new Vector2 (-30f, 18f);
 
 		Destroy (gameObject, 5);
 	}

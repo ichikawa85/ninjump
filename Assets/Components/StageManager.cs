@@ -10,7 +10,7 @@ public class StageManager : MonoBehaviour {
 	public float seconds = 5f;
 	private int count = 0;
 	
-	public const float INTERVAL = 1.5f;
+	public const float INTERVAL = 3.0f;
 	public float timer = INTERVAL;
 	
 	// Startメソッドをコルーチンとして呼び出す
@@ -49,7 +49,7 @@ public class StageManager : MonoBehaviour {
 		timer -= Time.deltaTime;
 		if (timer <= 0)
 		{
-			transform.position = new Vector2(14f, -5.4f);
+			transform.position = new Vector2(14f, 18f);
 			Instantiate (ground, transform.position, transform.rotation);
 			if(seconds > 1.0f){
 				//seconds = seconds - 0.5f;
