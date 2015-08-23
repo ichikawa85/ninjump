@@ -41,7 +41,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemy: {fileID: 141904, guid: e7b3b00a55d8a45ed83fc9813ce9f784, type: 2}
   item: {fileID: 193426, guid: d7325719169124eeab404f686f59c8d1, type: 2}
-  ground: {fileID: 156944, guid: c0d77defc885d446d9348b295b7069f8, type: 2}
+  ground: {fileID: 168934, guid: 2869d42c8f1a14c2fbda769c02a9e8e0, type: 2}
+  v_item: {x: 14, y: 3.4000001}
+  v_enemy: {x: 14, y: 1}
+  v_ground: {x: 14, y: -1}
   seconds: 1
   timer: 1
 --- !u!1001 &100100000

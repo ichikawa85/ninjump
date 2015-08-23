@@ -405,6 +405,18 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 128204, guid: 1d3c9d2de47684315be0fd0ad4a456f4, type: 2}
+      propertyPath: m_Name
+      value: Stage1Manager
+      objectReference: {fileID: 0}
+    - target: {fileID: 11496330, guid: 1d3c9d2de47684315be0fd0ad4a456f4, type: 2}
+      propertyPath: v_ground.y
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 11496330, guid: 1d3c9d2de47684315be0fd0ad4a456f4, type: 2}
+      propertyPath: ground
+      value: 
+      objectReference: {fileID: 156944, guid: c0d77defc885d446d9348b295b7069f8, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1d3c9d2de47684315be0fd0ad4a456f4, type: 2}
   m_IsPrefabParent: 0
@@ -458,6 +470,14 @@ Prefab:
     - target: {fileID: 474852, guid: c0d77defc885d446d9348b295b7069f8, type: 2}
       propertyPath: m_LocalScale.y
       value: 9.03798389
+      objectReference: {fileID: 0}
+    - target: {fileID: 11453904, guid: c0d77defc885d446d9348b295b7069f8, type: 2}
+      propertyPath: director.y
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 11453904, guid: c0d77defc885d446d9348b295b7069f8, type: 2}
+      propertyPath: director.x
+      value: -30
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c0d77defc885d446d9348b295b7069f8, type: 2}

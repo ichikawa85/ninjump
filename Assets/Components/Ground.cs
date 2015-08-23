@@ -4,14 +4,14 @@ using System.Collections;
 public class Ground : MonoBehaviour {
 
 	public float speed = -3f;
-	private Vector2 director;
+	public Vector2 director;
 
 	
 	// Use this for initialization
 	void Start (){
-		director = new Vector2 (-30f, 18f);
+		//director = new Vector2 (-30f, 18f);
 
-		Destroy (gameObject, 5);
+		Destroy (gameObject, 8);
 	}
 
 	void Update(){
