@@ -3,6 +3,8 @@ using System.Collections;
 using UnityEngine.UI;
 
 public class StageManager : MonoBehaviour {
+
+	const float MoveX = 14f;
 	
 	public GameObject[] enemys;
 	public GameObject item;
@@ -27,6 +29,7 @@ public class StageManager : MonoBehaviour {
 		while (true) {
 			
 			int rand = Random.Range(1, 4);
+			float y = Random.Range (0f, 4f);
 			switch(rand){
 			case 1:
 				int ene_rand = Random.Range(1, 5);
@@ -35,6 +38,12 @@ public class StageManager : MonoBehaviour {
 				break;
 			case 2:
 				transform.position = v_item;
+				transform.position = new Vector2(MoveX, y);
+				Instantiate (enemy, transform.position, transform.rotation);
+				break;
+			case 2:
+				transform.position = new Vector2(MoveX, y);
+
 				Instantiate (item, transform.position, transform.rotation);
 				break;
 			case 3:
@@ -57,7 +66,11 @@ public class StageManager : MonoBehaviour {
 		timer -= Time.deltaTime;
 		if (timer <= 0)
 		{
+<<<<<<< HEAD
 			transform.position = v_ground;
+=======
+			transform.position = new Vector2(MoveX, 18f);
+>>>>>>> fc41459... 敵とアイテムの出現位置変更対応
 			Instantiate (ground, transform.position, transform.rotation);
 			if(seconds > 1.0f){
 				//seconds = seconds - 0.5f;
