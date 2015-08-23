@@ -39,11 +39,14 @@ public class StageManager : MonoBehaviour {
 			case 2:
 				transform.position = v_item;
 				transform.position = new Vector2(MoveX, y);
-				Instantiate (enemy, transform.position, transform.rotation);
+				Instantiate (enemy, transform.position, transfor
 				break;
 			case 2:
 				transform.position = new Vector2(MoveX, y);
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4f99716daba671358829e35a925875cb041a57f2
 				Instantiate (item, transform.position, transform.rotation);
 				break;
 			case 3:
@@ -67,10 +70,14 @@ public class StageManager : MonoBehaviour {
 		if (timer <= 0)
 		{
 <<<<<<< HEAD
+<<<<<<< HEAD
 			transform.position = v_ground;
 =======
 			transform.position = new Vector2(MoveX, 18f);
 >>>>>>> fc41459... 敵とアイテムの出現位置変更対応
+=======
+			transform.position = new Vector2(MoveX, 18f);
+>>>>>>> 4f99716daba671358829e35a925875cb041a57f2
 			Instantiate (ground, transform.position, transform.rotation);
 			if(seconds > 1.0f){
 				//seconds = seconds - 0.5f;
