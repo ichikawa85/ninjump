@@ -32,6 +32,7 @@ public class Player : MonoBehaviour {
 	{
 		if(hp <= 0 )
 		{
+			FindObjectOfType<StageManager>().DisplayGameOver();
 			Debug.Log("GAME OVER");
 		}
 
