@@ -13,6 +13,8 @@ public class Player : MonoBehaviour {
 	public float distance;
 	public Vector2 UnitVector;
 
+	public GameObject effect_player;
+
 	[SerializeField]
 	private GameObject bullet;
 	private GameObject trriger;
@@ -101,6 +103,7 @@ public class Player : MonoBehaviour {
 	}
 
 	public void Damage(int dmg){
+		Instantiate (effect_player, transform.position, transform.rotation);
 		hp = hp - dmg;
 	}
 }

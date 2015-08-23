@@ -44,8 +44,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 188290}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.5454092, y: -3.16911125, z: 0}
-  m_LocalScale: {x: 3.12807488, y: 2.21326804, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 486438}
   m_RootOrder: 0
@@ -56,7 +56,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 101816}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.63000011, y: -.180000007, z: 0}
+  m_LocalPosition: {x: -4, y: 0, z: 0}
   m_LocalScale: {x: .34872523, y: .441764235, z: 1}
   m_Children:
   - {fileID: 469888}
@@ -90,7 +90,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Size: {x: 1, y: 1.60000002}
+  m_Size: {x: 4, y: 4}
 --- !u!61 &6183544
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -103,7 +103,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Size: {x: .899999976, y: 1.5}
+  m_Size: {x: 3.9000001, y: 3.9000001}
 --- !u!95 &9550058
 Animator:
   serializedVersion: 3
@@ -113,7 +113,7 @@ Animator:
   m_GameObject: {fileID: 101816}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: baf0f51592b194c3fab4ec768ee625b6, type: 2}
+  m_Controller: {fileID: 9100000, guid: a3498de3afcec46d48e4dcdd48d409e4, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -139,6 +139,7 @@ MonoBehaviour:
     m_Bits: 256
   distance: 0
   UnitVector: {x: 0, y: 0}
+  effect_player: {fileID: 0}
   bullet: {fileID: 190768, guid: 978b286d0ccf04ae691e36aa6709fc35, type: 2}
 --- !u!114 &11481902
 MonoBehaviour:

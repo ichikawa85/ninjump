@@ -5,6 +5,7 @@ public class Item : MonoBehaviour {
 	Rigidbody2D rb;
 	public int speed = -1;
 	public int point = 500;
+	public GameObject effect_item;
 
 	void Awake(){
 		rb = GetComponent<Rigidbody2D>();
@@ -16,6 +17,7 @@ public class Item : MonoBehaviour {
 	}
 
 	void OnTriggerEnter2D (Collider2D col){
+		Instantiate (effect_item, transform.position, transform.rotation);
 		FindObjectOfType<Score>().AddPoint(point);
 		Destroy(gameObject);
 	}

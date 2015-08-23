@@ -5,6 +5,7 @@ public class Enemy : MonoBehaviour {
 	public int hp = 10;
 	public int speed = -1;
 	public int point = 100;
+	public GameObject effect_enemy;
 
 	Rigidbody2D rb;
 
@@ -31,6 +32,8 @@ public class Enemy : MonoBehaviour {
 	protected void OnTriggerEnter2D (Collider2D col){
 		string layerName = LayerMask.LayerToName (col.gameObject.layer);
 		if(layerName == "Bullet"){
+
+			Instantiate (effect_enemy, transform.position, transform.rotation);
 			// PlayerBulletのTransformを取得
 			Transform playerBulletTransform = col.transform;
 			// Bulletコンポーネントを取得
