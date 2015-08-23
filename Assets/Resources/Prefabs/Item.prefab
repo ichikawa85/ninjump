@@ -73,7 +73,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: -5
   point: 500
-  effect_item: {fileID: 0}
+  effect_item: {fileID: 149416, guid: 7daa5162d8f0a1f4ba103d29e9406a84, type: 2}
 --- !u!212 &21238934
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -113,6 +113,10 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: effect
+      value: 
+      objectReference: {fileID: 149416, guid: 7daa5162d8f0a1f4ba103d29e9406a84, type: 2}
+    - target: {fileID: 0}
+      propertyPath: effect_item
       value: 
       objectReference: {fileID: 149416, guid: 7daa5162d8f0a1f4ba103d29e9406a84, type: 2}
     m_RemovedComponents: []

@@ -74,7 +74,7 @@ MonoBehaviour:
   hp: 10
   speed: -5
   point: 100
-  effect_enemy: {fileID: 0}
+  effect_enemy: {fileID: 130754, guid: 92fc9515df1c3574da38fc1635fd1a0e, type: 2}
 --- !u!212 &21278804
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -118,6 +118,10 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: effect
+      value: 
+      objectReference: {fileID: 130754, guid: 92fc9515df1c3574da38fc1635fd1a0e, type: 2}
+    - target: {fileID: 0}
+      propertyPath: effect_enemy
       value: 
       objectReference: {fileID: 130754, guid: 92fc9515df1c3574da38fc1635fd1a0e, type: 2}
     m_RemovedComponents: []
