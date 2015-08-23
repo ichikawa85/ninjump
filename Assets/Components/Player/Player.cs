@@ -37,8 +37,8 @@ public class Player : MonoBehaviour {
 	{
 		if(hp <= 0 )
 		{
-			animator.SetTrigger("IsDead");
 			FindObjectOfType<StageManager>().DisplayGameOver();
+			animator.SetTrigger("IsDead");
 			Debug.Log("GAME OVER");
 		}
 
@@ -89,7 +89,6 @@ public class Player : MonoBehaviour {
 			animator.SetTrigger("Ground");
 			isGrounded = true;
 			Vector2 temp = gameObject.transform.localScale;
-			//temp.x *= -1;
 			gameObject.transform.localScale = temp;
 			}
 	}

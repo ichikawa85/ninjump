@@ -19,4 +19,12 @@ public class PlayerTrriger : MonoBehaviour {
 			FindObjectOfType<Player>().Damage(1);
 		}
 	}
+
+	void OnTriggerExit2D (Collider2D col){
+		string layerName = LayerMask.LayerToName (col.gameObject.layer);
+		if(layerName == "Area"){
+			FindObjectOfType<StageManager>().DisplayGameOver();
+			Destroy(GameObject.Find ("MoMonja"));
+		}
+	}
 }

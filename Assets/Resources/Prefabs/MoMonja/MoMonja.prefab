@@ -56,7 +56,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 101816}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4, y: 0, z: 0}
+  m_LocalPosition: {x: -5.8177309, y: .411224127, z: 0}
   m_LocalScale: {x: .34872523, y: .441764235, z: 1}
   m_Children:
   - {fileID: 469888}
@@ -139,7 +139,7 @@ MonoBehaviour:
     m_Bits: 256
   distance: 0
   UnitVector: {x: 0, y: 0}
-  effect_player: {fileID: 0}
+  effect_player: {fileID: 137338, guid: 0851a2947fff092439852d4c88d8a132, type: 2}
   bullet: {fileID: 190768, guid: 978b286d0ccf04ae691e36aa6709fc35, type: 2}
 --- !u!114 &11481902
 MonoBehaviour:
