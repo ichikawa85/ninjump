@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 public class StageManager : MonoBehaviour {
 	
-	public GameObject enemy;
+	public GameObject[] enemys;
 	public GameObject item;
 	public GameObject ground;
 
@@ -29,8 +29,9 @@ public class StageManager : MonoBehaviour {
 			int rand = Random.Range(1, 4);
 			switch(rand){
 			case 1:
+				int ene_rand = Random.Range(1, 5);
 				transform.position = v_enemy;
-				Instantiate (enemy, transform.position, transform.rotation);
+				Instantiate (enemys[ene_rand], transform.position, transform.rotation);
 				break;
 			case 2:
 				transform.position = v_item;
