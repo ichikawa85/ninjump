@@ -16,6 +16,7 @@ public class Player : MonoBehaviour {
 	[SerializeField]
 	private GameObject bullet;
 	private GameObject trriger;
+	private Animator animator;
 
 	Vector2 hitPoint1, hitPoint2;
 	Vector2 min;
@@ -24,14 +25,17 @@ public class Player : MonoBehaviour {
 	void Start (){
 		rb = GetComponent<Rigidbody2D>();
 
+		animator = GetComponent<Animator> ();
 		min = Camera.main.ViewportToWorldPoint(new Vector2(0, 0));
 		max = Camera.main.ViewportToWorldPoint(new Vector2(1, 1));
+
 	}
 	
 	void Update ()
 	{
 		if(hp <= 0 )
 		{
+			animator.SetTrigger("IsDead");
 			FindObjectOfType<StageManager>().DisplayGameOver();
 			Debug.Log("GAME OVER");
 		}
@@ -53,12 +57,15 @@ public class Player : MonoBehaviour {
 			// 大きさが1以上で、ベクトルがy軸に対して30度未満のものをフリック入力として受け取る。
 			if(distance > 1f){
 				Debug.Log("Flick");
+				animator.SetTrigger("Attack");
 				Instantiate (bullet, transform.position, transform.rotation);
 			}else if(isGrounded && distance <= 1f){
 				// Empty
 				Jump ();
 			}
 		}
+
+		animator.SetBool("IsGround", isGrounded);
 	}
 
 	// 最初の位置を得る。
@@ -77,6 +84,7 @@ public class Player : MonoBehaviour {
 		string layerName = LayerMask.LayerToName (col.gameObject.layer);
 		Debug.Log (layerName);
 		if (layerName == "Ground") {
+			animator.SetTrigger("Ground");
 			isGrounded = true;
 			Vector2 temp = gameObject.transform.localScale;
 			//temp.x *= -1;
@@ -89,6 +97,7 @@ public class Player : MonoBehaviour {
 		Debug.Log("Jump");
 		rb.AddForce (Vector2.up * jumpForce);
 		isGrounded = false;
+		animator.SetTrigger("IsJump");
 	}
 
 	public void Damage(int dmg){
